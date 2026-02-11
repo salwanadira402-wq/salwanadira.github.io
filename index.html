@@ -29,7 +29,6 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    transition:0.3s;
     z-index:1000;
     box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
@@ -42,7 +41,7 @@ header h1{
 nav a{
     color:#5c4b3b;
     text-decoration:none;
-    margin-left:28px;
+    margin-left:25px;
     font-size:14px;
     transition:0.3s;
 }
@@ -55,11 +54,11 @@ nav a:hover{
 .hero{
     position:relative;
     height:100vh;
-    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    overflow:hidden;
 }
 
 .slide{
@@ -76,27 +75,55 @@ nav a:hover{
     opacity:1;
 }
 
-.hero-text{
+.hero-content{
     position:relative;
-    background:rgba(255,255,255,0.88);
-    padding:60px;
-    border-radius:10px;
-    max-width:650px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    background:rgba(255,255,255,0.9);
+    padding:50px;
+    border-radius:12px;
+    max-width:600px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
     z-index:2;
 }
 
-/* ABOUT ME SECTION */
+.hero-content h2{
+    margin-bottom:20px;
+}
+
+/* SEARCH BOX */
+.search-box{
+    margin-top:20px;
+}
+
+.search-box input{
+    padding:10px;
+    width:60%;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.search-box button{
+    padding:10px 15px;
+    border:none;
+    background:#5c4b3b;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.search-box button:hover{
+    background:#a1887f;
+}
+
+/* ABOUT SECTION */
 #about{
-    padding:140px 20px 100px 20px; /* extra top biar ga ketutup header */
-    text-align:center;
+    padding:120px 20px 100px 20px;
     background:#f6efe6;
+    text-align:center;
 }
 
 #about h2{
     margin-bottom:30px;
-    font-size:32px;
-    color:#5c4b3b;
+    font-size:30px;
 }
 
 #about img{
@@ -106,102 +133,34 @@ nav a:hover{
     box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.about-links a{
+/* SOCIAL BOX (IG & CV satu tempat) */
+.social-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
     display:inline-block;
-    margin:8px 15px;
+    margin-top:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.social-box a{
     text-decoration:none;
+    margin:0 15px;
     color:#5c4b3b;
     font-weight:bold;
-    transition:0.3s;
 }
 
-.about-links a:hover{
+.social-box a:hover{
     color:#a1887f;
 }
 
-.youtube-link{
-    margin-top:20px;
-}
+/* YOUTUBE BOX */
+.youtube-box{
+    margin-top:30px;
+    padding:20px;
+    background:white;
+    display:inline-block;
+    border-radius:10px;
+    box-shadow:0 5px
 
-.youtube-link a{
-    text-decoration:none;
-    color:#5c4b3b;
-    font-size:15px;
-}
-
-.youtube-link a:hover{
-    color:#a1887f;
-}
-
-/* FOOTER */
-footer{
-    background:#fdfaf6;
-    color:#5c4b3b;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Perpustakaan Digital | Salwa Nadira</h1>
-    <nav>
-        <a href="#">Beranda</a>
-        <a href="#about">About Me</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba');"></div>
-
-    <div class="hero-text">
-        <h2>Selamat Datang</h2>
-        <p>Perpustakaan Digital yang menyediakan akses bacaan dan referensi secara modern.</p>
-    </div>
-</section>
-
-<!-- ABOUT ME -->
-<section id="about">
-    <h2>About Me</h2>
-
-    <!-- FOTO DI TENGAH -->
-    <img src="https://images.unsplash.com/photo-1603415526960-fdb37b1a5a1a" alt="Foto Profil">
-
-    <!-- INSTAGRAM & CV -->
-    <div class="about-links">
-        <a href="ISI_LINK_INSTAGRAM" target="_blank">Instagram</a>
-        <a href="ISI_LINK_CV" target="_blank">Curriculum Vitae</a>
-    </div>
-
-    <!-- YOUTUBE DI PALING BAWAH -->
-    <div class="youtube-link">
-        <a href="ISI_LINK_YOUTUBE" target="_blank">Kunjungi Channel YouTube Saya</a>
-    </div>
-</section>
-
-<footer>
-    © 2026 Perpustakaan Digital
-</footer>
-
-<script>
-const slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 6000);
-</script>
-
-</body>
-</html>
-
+    
