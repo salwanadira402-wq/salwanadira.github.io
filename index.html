@@ -15,7 +15,7 @@
 
 body{
     background-color:#fdfaf6;
-    color:#4a4a4a;
+    color:#4a4b4a;
 }
 
 /* HEADER */
@@ -31,4 +31,235 @@ header{
     align-items:center;
     transition:0.3s;
     z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,0.
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+header.scrolled{
+    background:#f6efe6;
+    padding:14px 80px;
+}
+
+header h1{
+    color:#5c4b3b;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:#5c4b3b;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a1887f;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 2s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.hero-text{
+    position:relative;
+    background:rgba(255,255,255,0.88);
+    padding:60px;
+    border-radius:10px;
+    max-width:650px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    z-index:2;
+}
+
+.hero-text h2{
+    font-size:38px;
+    margin-bottom:15px;
+    font-weight:normal;
+    color:#5c4b3b;
+}
+
+.hero-text p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* PROFIL / ABOUT SECTION */
+#profil{
+    padding:120px 20px;
+    background:#f6efe6;
+    text-align:center;
+}
+
+#profil h2{
+    font-size:30px;
+    color:#5c4b3b;
+    margin-bottom:40px;
+}
+
+#profil img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom:25px;
+}
+
+#profil h3{
+    margin-bottom:10px;
+}
+
+#profil p{
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+#profil a{
+    text-decoration:none;
+    color:#5c4b3b;
+    font-weight:bold;
+    margin:0 15px;
+}
+
+#profil a:hover{
+    color:#a1887f;
+}
+
+/* VIDEO SECTION */
+#video{
+    padding:80px 20px;
+    background:#fff;
+    text-align:center;
+}
+
+#video h2{
+    font-size:28px;
+    color:#5c4b3b;
+    margin-bottom:30px;
+}
+
+#video a{
+    text-decoration:none;
+    color:#5c4b3b;
+    font-weight:bold;
+}
+
+#video a:hover{
+    color:#a1887f;
+}
+
+/* FOOTER */
+footer{
+    background:#f6efe6;
+    color:#5c4b3b;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header id="navbar">
+    <h1>Perpustakaan Digital | Salwa Nadira</h1>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Koleksi</a>
+        <a href="#">Layanan</a>
+        <a href="#">Kontak</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1529148482759-b35b25c5f217');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570');"></div>
+
+    <div class="hero-text">
+        <h2>Selamat Datang</h2>
+        <p>
+            Perpustakaan Digital yang menyediakan akses bacaan dan referensi
+            dalam satu ruang belajar yang terstruktur dan nyaman.
+        </p>
+    </div>
+
+</section>
+
+<!-- ===== PROFIL SECTION ===== -->
+<section id="profil">
+    <h2>Tentang Salwa Nadira</h2>
+
+    <img src="https://via.placeholder.com/150" alt="Foto Salwa Nadira">
+
+    <h3>Salwa Nadira</h3>
+    <p><strong>Mahasiswa | Pencinta Buku | Pengembang Perpustakaan Digital</strong></p>
+    <p>
+        Saya membangun Perpustakaan Digital ini sebagai ruang belajar interaktif dan mudah diakses. 
+        Web ini adalah wujud komitmen saya dalam memfasilitasi minat baca, berbagi ilmu, dan menginspirasi 
+        siapa saja yang ingin belajar secara praktis dan menyenangkan.
+    </p>
+
+    <div>
+        <a href="cv-salwa.pdf" target="_blank">Lihat CV</a>
+        <a href="https://www.instagram.com/usernamekamu" target="_blank">Instagram</a>
+    </div>
+</section>
+
+<!-- ===== VIDEO SECTION ===== -->
+<section id="video">
+    <h2>Video Inspiratif</h2>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Tonton di YouTube</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    &copy; 2026 Perpustakaan Digital | Pengetahuan Digital untuk Generasi Masa Depan
+</footer>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}, 6000);
+
+window.addEventListener("scroll", function(){
+    let header = document.getElementById("navbar");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
