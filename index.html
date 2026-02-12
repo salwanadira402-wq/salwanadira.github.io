@@ -105,7 +105,7 @@ nav a:hover{
     line-height:1.7;
 }
 
-/* PROFIL / ABOUT SECTION */
+/* PROFIL */
 #profil{
     padding:120px 20px;
     background:#f6efe6;
@@ -119,10 +119,11 @@ nav a:hover{
 }
 
 #profil img{
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     border-radius:50%;
     object-fit:cover;
+    object-position:top;
     box-shadow:0 8px 20px rgba(0,0,0,0.1);
     margin-bottom:25px;
 }
@@ -147,7 +148,7 @@ nav a:hover{
     color:#a1887f;
 }
 
-/* VIDEO SECTION */
+/* VIDEO */
 #video{
     padding:80px 20px;
     background:#fff;
@@ -158,16 +159,6 @@ nav a:hover{
     font-size:28px;
     color:#5c4b3b;
     margin-bottom:30px;
-}
-
-#video a{
-    text-decoration:none;
-    color:#5c4b3b;
-    font-weight:bold;
-}
-
-#video a:hover{
-    color:#a1887f;
 }
 
 /* FOOTER */
@@ -214,11 +205,10 @@ html{
 
 </section>
 
-<!-- ===== PROFIL SECTION ===== -->
 <section id="profil">
     <h2>Tentang Salwa Nadira</h2>
 
-    <img src="https://via.placeholder.com/150" alt="Foto Salwa Nadira">
+    <img src="salwa.jpg" alt="Foto Salwa Nadira">
 
     <h3>Salwa Nadira</h3>
     <p><strong>Mahasiswa | Pencinta Buku | Pengembang Perpustakaan Digital</strong></p>
@@ -234,13 +224,20 @@ html{
     </div>
 </section>
 
-<!-- ===== VIDEO SECTION ===== -->
 <section id="video">
     <h2>Video Inspiratif</h2>
-    <a href="https://youtu.be/SRsHtd913K4?si=ViLPJ8OlNXANIf3b" target="_blank">Tonton di YouTube</a>
+    <div style="max-width:800px; margin:auto;">
+        <iframe 
+            width="100%" 
+            height="450" 
+            src="https://www.youtube.com/embed/SRsHtd913K4" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
     &copy; 2026 Perpustakaan Digital | Pengetahuan Digital untuk Generasi Masa Depan
 </footer>
