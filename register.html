@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Register Anggota</title>
+
+<style>
+body{
+    font-family:Georgia, serif;
+    background:#fdfaf6;
+    text-align:center;
+    padding:60px;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    width:400px;
+    margin:auto;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select{
+    padding:10px;
+    margin:8px;
+    width:90%;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    padding:10px 20px;
+    background:#5c4b3b;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Register Anggota</h2>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap"><br>
+    <input type="text" id="nim" placeholder="NIM"><br>
+    <input type="text" id="prodi" placeholder="Program Studi"><br>
+    <input type="text" id="hp" placeholder="No HP"><br>
+
+    <button onclick="register()">Daftar Sekarang</button>
+</div>
+
+<script>
+function register(){
+    alert("Registrasi berhasil! Silakan login kembali.");
+}
+</script>
+
+</body>
+</html>
