@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Login Anggota</title>
+
+<style>
+body{
+    font-family:Georgia, serif;
+    background:#fdfaf6;
+    text-align:center;
+    padding:60px;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    width:350px;
+    margin:auto;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+    padding:10px;
+    margin:8px;
+    width:90%;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    padding:10px 20px;
+    background:#5c4b3b;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+a{
+    display:block;
+    margin-top:15px;
+    color:#5c4b3b;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Login Anggota Perpustakaan</h2>
+
+    <input type="text" id="namaLogin" placeholder="Masukkan Nama"><br>
+    <input type="text" id="nimLogin" placeholder="Masukkan NIM"><br>
+
+    <button onclick="login()">Login</button>
+
+    <a href="register.html" target="_blank">
+        Belum punya akun? <b>Daftar Anggota Baru</b>
+    </a>
+</div>
+
+<script>
+function login(){
+    let nama = document.getElementById("namaLogin").value;
+    let nim = document.getElementById("nimLogin").value;
+
+    if(nama === "" || nim === ""){
+        alert("Isi Nama dan NIM terlebih dahulu!");
+    } else {
+        alert("Login berhasil! Selamat datang " + nama);
+    }
+}
+</script>
+
+</body>
+</html>
