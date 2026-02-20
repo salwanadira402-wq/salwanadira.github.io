@@ -3,33 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hubungi Saya</title>
+<title>Hubungi Saya - Salwa Nadira</title>
 
 <style>
-body{
-    font-family: 'Georgia', serif;
-    background:#fdfaf6;
+*{
     margin:0;
-    color:#5c4b3b;
-    text-align:center;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Georgia', serif;
 }
 
+body{
+    background:#fdfaf6;
+    color:#5c4b3b;
+}
+
+/* HEADER */
+header{
+    background:#f6efe6;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#5c4b3b;
+    margin-left:25px;
+}
+
+nav a:hover{
+    color:#a1887f;
+}
+
+/* CONTAINER */
 .container{
-    max-width:700px;
-    margin:100px auto;
+    max-width:900px;
+    margin:80px auto;
+    padding:40px;
     background:white;
-    padding:50px;
     border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-h1{
+h2{
+    text-align:center;
     margin-bottom:30px;
+}
+
+/* FORM */
+form{
+    margin-bottom:40px;
 }
 
 input, textarea{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin-bottom:15px;
     border:1px solid #ccc;
     border-radius:5px;
@@ -38,7 +72,7 @@ input, textarea{
 button{
     background:#5c4b3b;
     color:white;
-    padding:10px 20px;
+    padding:12px 25px;
     border:none;
     border-radius:5px;
     cursor:pointer;
@@ -48,16 +82,40 @@ button:hover{
     background:#a1887f;
 }
 
+/* INFO */
 .info{
-    margin-top:30px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+iframe{
+    width:100%;
+    height:300px;
+    border-radius:10px;
+    border:none;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#f6efe6;
+    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+    <h1>Perpustakaan Digital | Salwa Nadira</h1>
+    <nav>
+        <a href="index.html">Beranda</a>
+    </nav>
+</header>
+
 <div class="container">
-    <h1>Hubungi Saya</h1>
+
+    <h2>Hubungi Saya</h2>
 
     <form>
         <input type="text" placeholder="Nama Lengkap" required>
@@ -67,10 +125,20 @@ button:hover{
     </form>
 
     <div class="info">
-        <p>Email: salwanadira@email.com</p>
-        <p>Lokasi: Jakarta, Indonesia</p>
+        <p><strong>Email:</strong> salwanadira@email.com</p>
+        <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
     </div>
+
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.55212080092!2d106.774124!3d-6.229728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1c2d89a6b1b%3A0x3039d80b220c5a0!2sJakarta!5e0!3m2!1sid!2sid!4v1690000000000"
+    loading="lazy">
+    </iframe>
+
 </div>
+
+<footer>
+    © 2026 Perpustakaan Digital | Salwa Nadira
+</footer>
 
 </body>
 </html>
