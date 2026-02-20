@@ -39,10 +39,19 @@ header.scrolled{
     padding:14px 80px;
 }
 
-header h1{
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
     color:#5c4b3b;
     font-size:20px;
     letter-spacing:1px;
+}
+
+.logo-kecil{
+    width:28px;
+    height:28px;
+    object-fit:contain;
 }
 
 nav a{
@@ -137,17 +146,6 @@ nav a:hover{
     margin-bottom:15px;
 }
 
-#profil a{
-    text-decoration:none;
-    color:#5c4b3b;
-    font-weight:bold;
-    margin:0 15px;
-}
-
-#profil a:hover{
-    color:#a1887f;
-}
-
 /* VIDEO */
 #video{
     padding:80px 20px;
@@ -159,50 +157,6 @@ nav a:hover{
     font-size:28px;
     color:#5c4b3b;
     margin-bottom:30px;
-}
-
-/* KONTAK */
-#kontak{
-    padding:100px 20px;
-    background:#f6efe6;
-    text-align:center;
-}
-
-#kontak h2{
-    font-size:28px;
-    color:#5c4b3b;
-    margin-bottom:30px;
-}
-
-.kontak-box{
-    max-width:600px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.kontak-box input,
-.kontak-box textarea{
-    width:100%;
-    padding:10px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-
-.kontak-box button{
-    background:#5c4b3b;
-    color:white;
-    padding:10px 20px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.kontak-box button:hover{
-    background:#a1887f;
 }
 
 footer{
@@ -221,8 +175,11 @@ html{
 
 <body>
 
-    <header id="navbar">
-    <h1>Perpustakaan Digital | Salwa Nadira</h1>
+<header id="navbar">
+    <h1 class="brand">
+        <img src="logo.png" alt="Logo" class="logo-kecil">
+        Perpustakaan Digital | Salwa Nadira
+    </h1>
     <nav>
         <a href="index.html">Beranda</a>
         <a href="#">Koleksi</a>
