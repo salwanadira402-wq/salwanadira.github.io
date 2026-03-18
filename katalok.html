@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Katalog</title>
+<style>
+body{font-family:Georgia;background:#fdfaf6;text-align:center;padding:40px}
+.card{background:#f6efe6;padding:15px;margin:10px;border-radius:8px}
+</style>
+</head>
+
+<body>
+
+<h2>Katalog Buku</h2>
+
+<input type="text" id="cari">
+<button onclick="cari()">Cari</button>
+
+<div id="hasil"></div>
+
+<script>
+const buku=[
+{judul:"Manajemen Perpustakaan",penulis:"Andi"},
+{judul:"Literasi Digital",penulis:"Rina"},
+{judul:"Metodologi Penelitian",penulis:"Budi"}
+];
+
+function cari(){
+let key=document.getElementById("cari").value.toLowerCase();
+let hasil=document.getElementById("hasil");
+hasil.innerHTML="";
+
+let f=buku.filter(b=>b.judul.toLowerCase().includes(key));
+
+f.forEach(b=>{
+hasil.innerHTML+=`<div class="card">
+<h3>${b.judul}</h3>
+<p>${b.penulis}</p>
+</div>`;
+});
+}
+</script>
+
+</body>
+</html>
