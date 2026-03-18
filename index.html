@@ -3,117 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SANADI Library</title>
+<title>SANADI Library | Perpustakaan Perguruan Tinggi</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Georgia}
-body{background:#fdfaf6;color:#4a4b4a}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Georgia', serif;
+}
+
+body{
+    background:#fdfaf6;
+    color:#4a4b4a;
+}
 
 /* HEADER */
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:#5c4b3b;
-color:white;
-position:sticky;
-top:0;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:rgba(255,248,240,0.95);
+    padding:18px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#5c4b3b;
+    font-size:20px;
+}
+
+.logo-kecil{
+    width:28px;
+}
+
+nav{
+    display:flex;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:0 12px;
-font-size:14px;
+    color:#5c4b3b;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
 }
 
-nav a:hover{color:#ffd7b5}
+nav a:hover{
+    color:#a1887f;
+}
+
+.burger{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
 
 /* HERO */
 .hero{
-height:90vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover;
-color:white;
+    position:relative;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover no-repeat;
 }
 
-.hero-box{
-background:rgba(0,0,0,0.5);
-padding:50px;
-border-radius:10px;
+.hero-text{
+    background:rgba(255,255,255,0.9);
+    padding:60px;
+    border-radius:10px;
+    max-width:650px;
 }
-
-.hero h1{font-size:40px;margin-bottom:15px}
 
 /* SEARCH */
 #search{
-padding:80px 20px;
-text-align:center;
+    background:#ffffff;
+    padding:80px 20px;
+    text-align:center;
 }
 
-input{
-padding:12px;
-width:300px;
-max-width:90%;
+#search h2{
+    margin-bottom:30px;
+    color:#5c4b3b;
 }
 
-button{
-padding:12px 20px;
-background:#5c4b3b;
-color:white;
-border:none;
-cursor:pointer;
+.search-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
+.search-container input{
+    width:400px;
+    max-width:90%;
+    padding:14px;
+    border:1px solid #d7ccc8;
+    border-radius:6px;
+}
+
+.search-container button{
+    padding:14px 25px;
+    background:#5c4b3b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* HASIL */
 #results{
-margin-top:30px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
 }
 
 .card{
-background:#f6efe6;
-padding:15px;
-border-radius:8px;
-width:220px;
-}
-
-/* FITUR */
-.features{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-padding:60px 20px;
-gap:20px;
-}
-
-.feature{
-background:#f6efe6;
-padding:25px;
-width:250px;
-border-radius:10px;
-text-align:center;
+    background:#f6efe6;
+    padding:20px;
+    width:250px;
+    border-radius:8px;
+    text-align:left;
 }
 
 /* ABOUT */
 #about{
-padding:80px 20px;
-text-align:center;
+    padding:100px 20px;
+    text-align:center;
+    background:#fdfaf6;
+}
+
+#about p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* VIDEO */
+#video{
+    padding:80px 20px;
+    text-align:center;
+    background:#fff;
+}
+
+#video iframe{
+    width:100%;
+    max-width:650px;
+    height:350px;
+    border-radius:10px;
 }
 
 /* FOOTER */
 footer{
-background:#5c4b3b;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+    background:#5c4b3b;
+    color:white;
+    padding:50px 20px 20px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.footer-section{
+    max-width:250px;
+    margin:15px;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding-top:15px;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    nav{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#f6efe6;
+        width:200px;
+        flex-direction:column;
+        display:none;
+        padding:20px;
+    }
+
+    nav a{
+        margin:10px 0;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .burger{
+        display:block;
+    }
 }
 </style>
 </head>
@@ -121,92 +226,119 @@ margin-top:40px;
 <body>
 
 <header>
-<h2>SANADI Library</h2>
-<nav>
-<a href="index.html">Beranda</a>
-<a href="katalog.html">Katalog</a>
-<a href="literasi.html">Kegiatan Literasi</a>
-<a href="about.html">About Us</a>
-<a href="kontak.html">Kontak</a>
-<a href="login.html">Login</a>
-</nav>
+    <div class="brand">
+        <img src="logo.png" class="logo-kecil">
+        SANADI Library
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+
+    <!-- NAVBAR SUDAH DIPERBAIKI -->
+    <nav id="navMenu">
+        <a href="index.html">Beranda</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="#">Koleksi</a>
+        <a href="#">Layanan</a>
+        <a href="literasi.html">Kegiatan Literasi</a>
+        <a href="about.html">About Us</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="login.html">Login</a>
+    </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<div class="hero-box">
-<h1>Perpustakaan Perguruan Tinggi Digital</h1>
-<p>Mendukung pembelajaran, penelitian, dan literasi informasi</p>
-</div>
+    <div class="hero-text">
+        <h2>Perpustakaan Perguruan Tinggi Digital</h2>
+        <p>
+            Mendukung kegiatan akademik melalui literatur ilmiah 
+            dan referensi terpercaya bagi mahasiswa dan dosen.
+        </p>
+    </div>
 </section>
 
-<!-- SEARCH -->
 <section id="search">
-<h2>Pencarian Koleksi</h2>
+    <h2>Pencarian Koleksi</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Masukkan judul buku...">
+        <button onclick="searchBook()">Cari</button>
+    </div>
 
-<input type="text" id="searchInput" placeholder="Cari judul buku...">
-<button onclick="searchBook()">Cari</button>
-
-<div id="results"></div>
+    <div id="results"></div>
 </section>
 
-<!-- FITUR -->
-<section class="features">
-<div class="feature">
-<h3>📚 Katalog Online</h3>
-<p>Akses koleksi buku dengan mudah</p>
-</div>
-
-<div class="feature">
-<h3>📖 Literasi</h3>
-<p>Kegiatan edukasi dan pelatihan</p>
-</div>
-
-<div class="feature">
-<h3>💻 Akses Digital</h3>
-<p>Sumber ilmiah berbasis online</p>
-</div>
-</section>
-
-<!-- ABOUT -->
 <section id="about">
-<h2>Tentang Kami</h2>
-<p>
-SANADI Library adalah perpustakaan perguruan tinggi berbasis digital
-yang menyediakan informasi akademik untuk mahasiswa dan dosen.
-</p>
+    <h2>Tentang Perpustakaan Perguruan Tinggi</h2>
+    <p>
+        SANADI Library merupakan perpustakaan perguruan tinggi berbasis digital 
+        yang berfungsi sebagai pusat sumber informasi akademik untuk mendukung 
+        pendidikan, penelitian, dan pengembangan ilmu pengetahuan.
+    </p>
+</section>
+
+<section id="video">
+    <h2>Video Inspiratif</h2>
+    <iframe src="https://www.youtube.com/embed/SRsHtd913K4" allowfullscreen></iframe>
 </section>
 
 <footer>
-<p>© 2026 SANADI Library</p>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>📚 SANADI Library</h3>
+            <p>Pusat literasi digital perguruan tinggi.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>⏰ Jam Operasional</h3>
+            <p>Senin - Jumat : 08.00 - 16.00</p>
+            <p>Sabtu : 09.00 - 14.00</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>📞 Kontak</h3>
+            <p>Email: info@sanadilibrary.com</p>
+            <p>Instagram: @salwanadiira</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 SANADI Library
+    </div>
 </footer>
 
 <script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
 const books = [
-{title:"Manajemen Perpustakaan",author:"Dr. Andi"},
-{title:"Literasi Digital",author:"Rina"},
-{title:"Metodologi Penelitian",author:"Budi"}
+    {title:"Manajemen Perpustakaan Modern", author:"Dr. Andi"},
+    {title:"Pengantar Ilmu Informasi", author:"Siti Rahma"},
+    {title:"Metodologi Penelitian", author:"Prof. Budi"},
+    {title:"Literasi Digital Perguruan Tinggi", author:"Rina Lestari"}
 ];
 
 function searchBook(){
-let key=document.getElementById("searchInput").value.toLowerCase();
-let result=document.getElementById("results");
-result.innerHTML="";
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    const resultDiv = document.getElementById("results");
+    resultDiv.innerHTML = "";
 
-let filtered=books.filter(b=>b.title.toLowerCase().includes(key));
+    const filtered = books.filter(book =>
+        book.title.toLowerCase().includes(keyword)
+    );
 
-if(filtered.length===0){
-result.innerHTML="Tidak ditemukan";
-return;
-}
+    if(filtered.length === 0){
+        resultDiv.innerHTML = "<p>Tidak ditemukan.</p>";
+        return;
+    }
 
-filtered.forEach(b=>{
-result.innerHTML+=`
-<div class="card">
-<h4>${b.title}</h4>
-<p>${b.author}</p>
-</div>`;
-});
+    filtered.forEach(book=>{
+        resultDiv.innerHTML += `
+            <div class="card">
+                <h4>${book.title}</h4>
+                <p>Penulis: ${book.author}</p>
+            </div>
+        `;
+    });
 }
 </script>
 
