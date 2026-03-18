@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - SANADI Library</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Georgia', serif;
+}
+
+body{
+    background:#fdfaf6;
+    color:#5c4b3b;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#5c4b3b;
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+}
+
+/* LAYOUT */
+.container{
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:250px;
+    background:#f6efe6;
+    min-height:100vh;
+    padding:30px 20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin-bottom:10px;
+    text-decoration:none;
+    color:#5c4b3b;
+    border-radius:6px;
+}
+
+.sidebar a:hover{
+    background:#e8dcd1;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:50px;
+}
+
+/* PROFILE */
+.profile-box{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.profile-box img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.profile-links a{
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    background:#e8dcd1;
+    text-decoration:none;
+    color:#5c4b3b;
+    border-radius:6px;
+}
+
+/* CARDS */
+.dashboard{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:220px;
+    border-radius:10px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>SANADI Library</h2>
+<nav>
+<a href="index.html">Beranda</a>
+<a href="katalog.html">Katalog</a>
+<a href="literasi.html">Kegiatan Literasi</a>
+<a href="about.html">About Us</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>About</h2>
+    <a href="#">🏫 Tentang Perpustakaan</a>
+    <a href="#">👩‍💻 Profil Pengembang</a>
+    <a href="katalog.html">📚 Katalog</a>
+    <a href="literasi.html">📖 Literasi</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="profile-box">
+        <img src="salwa.jpg" alt="Foto">
+        <h3>Salwa Nadira</h3>
+        <p><strong>Mahasiswa Ilmu Perpustakaan</strong></p>
+        <p>
+            SANADI Library merupakan perpustakaan perguruan tinggi berbasis digital 
+            yang dikembangkan untuk mendukung kegiatan akademik mahasiswa dan dosen 
+            melalui layanan informasi yang modern dan mudah diakses.
+        </p>
+
+        <div class="profile-links">
+            <a href="https://docs.google.com/document/d/1JoN5TQFH0LnJc57tKSxIkn-xe-aAv8b1/edit" target="_blank">CV</a>
+            <a href="https://www.instagram.com/salwanadiira/" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h4>Visi</h4>
+            <p>Menjadi pusat informasi digital modern.</p>
+        </div>
+
+        <div class="card">
+            <h4>Misi</h4>
+            <p>Mendukung pendidikan dan penelitian.</p>
+        </div>
+
+        <div class="card">
+            <h4>Layanan</h4>
+            <p>Katalog, literasi, dan akses digital.</p>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
