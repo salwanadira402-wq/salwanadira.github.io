@@ -140,20 +140,19 @@ nav a:hover{
 /* KOLEKSI */
 #koleksi{
     padding:80px 20px;
-    background:#fdfaf6;
+}
+
+/* EVENT */
+#event{
+    padding:80px 20px;
+    background:#f6efe6;
+    text-align:center;
 }
 
 /* ABOUT */
 #about{
     padding:100px 20px;
     text-align:center;
-    background:#fdfaf6;
-}
-
-#about p{
-    max-width:750px;
-    margin:auto;
-    line-height:1.7;
 }
 
 /* VIDEO */
@@ -198,7 +197,6 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:768px){
-
     header{
         padding:18px 20px;
     }
@@ -240,24 +238,18 @@ footer{
     <div class="burger" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-        <a href="index.html">Beranda</a>
-        <a href="katalog.html">Katalog</a>
+        <a href="#">Beranda</a>
+        <a href="#">Katalog</a>
         <a href="#koleksi">Koleksi</a>
-        <a href="#">Layanan</a>
-        <a href="literasi.html">Kegiatan Literasi</a>
-        <a href="about.html">About Us</a>
-        <a href="kontak.html">Kontak</a>
-        <a href="login.html">Login</a>
+        <a href="#event">Event</a>
+        <a href="#">Kontak</a>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-text">
         <h2>Perpustakaan Perguruan Tinggi Digital</h2>
-        <p>
-            Mendukung kegiatan akademik melalui literatur ilmiah 
-            dan referensi terpercaya bagi mahasiswa dan dosen.
-        </p>
+        <p>Mendukung kegiatan akademik melalui literatur ilmiah</p>
     </div>
 </section>
 
@@ -267,100 +259,48 @@ footer{
         <input type="text" id="searchInput" placeholder="Masukkan judul buku...">
         <button onclick="searchBook()">Cari</button>
     </div>
-
     <div id="results"></div>
 </section>
 
-<!-- KOLEKSI (YANG KAMU MAU) -->
 <section id="koleksi">
     <h2 style="text-align:center;">Koleksi Buku</h2>
-
     <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:40px;">
-        
-        <div class="card">
-            <h4>Manajemen Perpustakaan Modern</h4>
-            <p>Penulis: Dr. Andi</p>
-        </div>
-
-        <div class="card">
-            <h4>Pengantar Ilmu Informasi</h4>
-            <p>Penulis: Siti Rahma</p>
-        </div>
-
-        <div class="card">
-            <h4>Metodologi Penelitian</h4>
-            <p>Penulis: Prof. Budi</p>
-        </div>
-
-        <div class="card">
-            <h4>Literasi Digital Perguruan Tinggi</h4>
-            <p>Penulis: Rina Lestari</p>
-        </div>
-
-    </div>
-
-    <div style="text-align:center;">
-        <a href="katalog.html" style="
-            padding:12px 25px;
-            background:#5c4b3b;
-            color:white;
-            text-decoration:none;
-            border-radius:6px;
-        ">
-            Lihat Semua Koleksi
-        </a>
+        <div class="card"><h4>Manajemen Perpustakaan Modern</h4></div>
+        <div class="card"><h4>Pengantar Ilmu Informasi</h4></div>
+        <div class="card"><h4>Metodologi Penelitian</h4></div>
     </div>
 </section>
 
-<section id="about">
-    <h2>Tentang Perpustakaan Perguruan Tinggi</h2>
-    <p>
-        SANADI Library merupakan perpustakaan perguruan tinggi berbasis digital 
-        yang berfungsi sebagai pusat sumber informasi akademik untuk mendukung 
-        pendidikan, penelitian, dan pengembangan ilmu pengetahuan.
-    </p>
+<!-- EVENT -->
+<section id="event">
+    <h2>Kegiatan Perpustakaan</h2>
+
+    <input type="text" id="eventInput" placeholder="Nama kegiatan...">
+    <button onclick="tambahEvent()">Tambah</button>
+
+    <div id="eventList" style="margin-top:30px; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;"></div>
 </section>
 
 <section id="video">
-    <h2>Video Inspiratif</h2>
-    <iframe src="https://www.youtube.com/embed/SRsHtd913K4" allowfullscreen></iframe>
+    <h2>Video</h2>
+    <iframe src="https://www.youtube.com/embed/SRsHtd913K4"></iframe>
 </section>
 
 <footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>📚 SANADI Library</h3>
-            <p>Pusat literasi digital perguruan tinggi.</p>
-        </div>
-
-        <div class="footer-section">
-            <h3>⏰ Jam Operasional</h3>
-            <p>Senin - Jumat : 08.00 - 16.00</p>
-            <p>Sabtu : 09.00 - 14.00</p>
-        </div>
-
-        <div class="footer-section">
-            <h3>📞 Kontak</h3>
-            <p>Email: info@sanadilibrary.com</p>
-            <p>Instagram: @salwanadiira</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 SANADI Library
-    </div>
+    <p style="text-align:center;">© 2026 SANADI Library</p>
 </footer>
 
 <script>
+// MENU
 function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("active");
 }
 
+// SEARCH
 const books = [
-    {title:"Manajemen Perpustakaan Modern", author:"Dr. Andi"},
-    {title:"Pengantar Ilmu Informasi", author:"Siti Rahma"},
-    {title:"Metodologi Penelitian", author:"Prof. Budi"},
-    {title:"Literasi Digital Perguruan Tinggi", author:"Rina Lestari"}
+    {title:"Manajemen Perpustakaan Modern"},
+    {title:"Pengantar Ilmu Informasi"},
+    {title:"Metodologi Penelitian"}
 ];
 
 function searchBook(){
@@ -372,20 +312,51 @@ function searchBook(){
         book.title.toLowerCase().includes(keyword)
     );
 
-    if(filtered.length === 0){
-        resultDiv.innerHTML = "<p>Tidak ditemukan.</p>";
-        return;
-    }
-
     filtered.forEach(book=>{
-        resultDiv.innerHTML += `
+        resultDiv.innerHTML += `<div class="card"><h4>${book.title}</h4></div>`;
+    });
+}
+
+// EVENT DATA
+let events = [
+    {nama:"Pelatihan Literasi"},
+    {nama:"Workshop Penulisan"},
+];
+
+// TAMPILKAN EVENT
+function tampilkanEvent(){
+    const container = document.getElementById("eventList");
+    container.innerHTML = "";
+
+    events.forEach((event, index)=>{
+        container.innerHTML += `
             <div class="card">
-                <h4>${book.title}</h4>
-                <p>Penulis: ${book.author}</p>
+                <h4>${event.nama}</h4>
+                <button onclick="hapusEvent(${index})">Hapus</button>
             </div>
         `;
     });
 }
+
+// TAMBAH EVENT
+function tambahEvent(){
+    const input = document.getElementById("eventInput");
+    if(input.value === "") return alert("Isi dulu!");
+
+    events.push({nama: input.value});
+    input.value = "";
+    tampilkanEvent();
+}
+
+// HAPUS EVENT
+function hapusEvent(index){
+    events.splice(index,1);
+    tampilkanEvent();
+}
+
+// LOAD
+window.onload = tampilkanEvent;
+
 </script>
 
 </body>
